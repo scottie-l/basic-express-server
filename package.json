@@ -1,0 +1,26 @@
+{
+  "name": "basic-express-server",
+  "version": "1.0.0",
+  "description": "setting up an HTTP server and routes with tests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottie-l/basic-express-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scottie-l/basic-express-server/issues"
+  },
+  "homepage": "https://github.com/scottie-l/basic-express-server#readme",
+  "dependencies": {
+    "dotenv": "^11.0.0",
+    "express": "^4.17.2",
+    "jest": "^27.4.7",
+    "supertest": "^6.2.0"
+  }
+}

@@ -13,7 +13,6 @@ describe('Testing our route', () => {
     
     it('Should validate the method is correct', async () => {
         const res = await req.post('/person?name=test');
-        // expect(res.method).toEqual('get');
         expect(res.status).toEqual(404);
     });
     

@@ -3,7 +3,7 @@
 const server = require('../lib/server');
 const supertest = require('supertest');
 const req = supertest(server.app);
-const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
+const consoleSpy = jest.spyOn(console, 'log').mockImplementation(); //Kristian Esvelt helped me with this. Lines 6, 9, 10 & 16. and description on how they work.
 
 describe('Test will run neccessary checks for logger function', () => {
     beforeEach(() => {
@@ -11,16 +11,7 @@ describe('Test will run neccessary checks for logger function', () => {
     })
     it('Should log method used from the request', async () => {
         const res = await req.get('/person?name=test');
-        // console.log('string', consoleSpy);
         expect(res.status).toEqual(200);
         expect(consoleSpy).toHaveBeenLastCalledWith('GET', '/person');
-    });
-// });
-
-// describe('Testing the returned object', () => {
-
-    // it('Should return the proper object', async () => {
-    //     const res = await req.get('/people?name=test');
-    //     expect(res.body.name).toEqual('test');
-    // });  
+    }); 
 });

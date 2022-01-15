@@ -8,7 +8,6 @@ describe('Testing our validator function', () => {
 
     it('Should validate that the name key exists in query', async () => {
         const res = await req.get('/person?name=test');
-        // console.log(res);
         expect(res.status).toEqual(200);
     });
 

@@ -1,10 +1,11 @@
 'use strict';
 
-// should require = lib/server.js
 // should require dotenv, reading PORT from your .env file
-// It should call the .start() method from the server with the PORT set in your environment
+const PORT = process.env.PORT || 3000; // server.listen(3000)
 
+// should require = lib/server.js
 const server = require('./lib/server.js');
 
-server.start(3000);
+// It should call the .start() method from the server with the PORT set in your environment
+server.start(PORT); // server.start(3000);
  

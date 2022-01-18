@@ -1,6 +1,6 @@
 'use strict';
 
-const server = require('./lib/server.js');
+const server = require('../lib/server');
 const supertest = require('supertest');
 const req = supertest(server.app);
 
@@ -16,10 +16,10 @@ describe('Testing the create Message function', () => {
         expect(res.body.text).toEqual('test');
     });
 
-    it('Should reeturn a 404 status if no text or author  is present', async () => {
+    it('Should return a 404 status if no text or author is present', async () => {
         let res = await req.post('/message');
 
-        expect(res.status).toEqual(400);
+        expect(res.status).toEqual(404);
         expect(res.text).toEqual('Bad Request');
     });
 });
